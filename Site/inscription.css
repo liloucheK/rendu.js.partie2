@@ -1,0 +1,97 @@
+*{
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 0;
+}
+body{
+    width: 80%;
+    margin: 80px auto;
+    background-color: #fff;
+}
+form{
+    border: 1px solid #202020;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+    animation: slideIn 1s;
+}
+form > div{
+    margin: 30px 20px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    
+}
+input{
+    height: 20px;
+    width: 40%;
+    border-radius: 10px;
+    
+}
+button{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding: 10px 32px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+button:hover{
+    animation: spin;
+    animation-duration: 2s;
+}
+
+.message-error{
+    border: 1px solid rgba(212, 42, 0, 1);
+    color: rgb(212, 42, 0);
+    background-color: rgba(212, 42, 0, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+.message-error.visible{
+    visibility: visible;
+}
+
+.message-success{
+    border: 1px solid rgba(81, 150, 2);
+    color: rgb(81, 150, 2);
+    background-color: rgba(113, 212, 0, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+.message-success.visible{
+    visibility: visible;
+    display: block;
+}
+.success{
+    border: 1px solid rgb(81, 150, 2);
+    background-color: rgba(113, 212, 0, 0.4);
+}
+.error{
+    border: 1px solid rgb(212, 42, 0);
+    background-color: rgba(212, 42, 0, 0.4);
+}
+
+@keyframes spin {
+    0%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        transform: translateX(24px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
